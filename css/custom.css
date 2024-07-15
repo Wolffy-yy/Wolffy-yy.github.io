@@ -741,3 +741,19 @@ h6::before {
 }
 
 
+/* 欢迎信息(目前在公告栏) */
+#welcome-info {
+  background: linear-gradient(45deg, #009dff, #e3fbf9);
+  border-radius: 18px;
+  padding: 8px;
+}
+[data-theme="dark"] #welcome-info {
+  background: #212121;
+}
+
+
+/* 这是加载动画的css背景图换url */
+.loading-img {   
+  background: url(/img/loading1.png) no-repeat center center;
+  background-size: cover;
+}
