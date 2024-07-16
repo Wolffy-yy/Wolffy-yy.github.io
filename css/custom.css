@@ -118,7 +118,7 @@
 }
 /* 这里的2是代表导航栏的第2个元素，即有子菜单的元素，可以按自己需求修改,可以直接复制粘贴在下面 */
 .menus_items .menus_item:nth-child(2) .menus_item_child {   /*5表示第五个菜单元素*/
-  left: -130px;    /*此栏与上栏参数可调节子菜单栏是否居中显示，具体自行尝试*/
+  left: -200px;    /*此栏与上栏参数可调节子菜单栏是否居中显示，具体自行尝试*/
 }
 /* 子菜单第2个元素居中 */
 #nav .menus_items .menus_item:hover .menus_item_child {
@@ -757,3 +757,66 @@ h6::before {
   background: url(/img/loading1.png) no-repeat center center;
   background-size: cover;
 }
+
+
+
+/* 全局宽度 */
+.layout {
+  max-width: 1400px;
+}
+
+/* 侧边卡片栏宽度 */
+.aside-content {
+  max-width: 318px;
+  min-width: 300px;
+}
+
+/* 平板尺寸自适应(不启用侧边栏宽度限制) */
+@media screen and (max-width: 900px) {
+  .aside-content {
+    max-width: none !important;
+    padding: 0 5px 0 5px;
+  }
+}
+
+
+
+/* 除了首页以外其他页面隐藏卡片，并采用宽屏显示 */
+#archive,
+#page,
+#category,
+#tag {
+  width: 100%;
+}
+.page:not(.page.home) .aside-content {
+  display: none;
+}
+
+
+
+/* 友链一行显示更多 */
+.site-card {
+  width: calc(100% / 5 - 16px) !important;
+  border-radius: 18px !important;
+}
+.site-card .img {
+  height: 165px !important;
+  border-radius: 18px !important;
+}
+/* 适应宽度不同的设备 */
+@media screen and (max-width: 1200px) {
+  .site-card {
+    width: calc(100% / 4 - 16px) !important;
+  }
+}
+@media screen and (max-width: 900px) {
+  .site-card {
+    width: calc(100% / 3 - 16px) !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  .site-card {
+    width: calc(100% / 2 - 16px) !important;
+  }
+}
+
