@@ -104,6 +104,7 @@
   left: 50% !important;
   transform: translateX(-50%) !important;
 }
+
 /* 子菜单横向展示 */
 #nav .menus_items .menus_item:hover .menus_item_child {
   display: flex !important;
@@ -112,6 +113,7 @@
 .menus_items .menus_item:nth-child(3) .menus_item_child {   /*5表示第五个菜单元素*/
   left: -63px;    /*此栏与上栏参数可调节子菜单栏是否居中显示，具体自行尝试*/
 }
+
 /* 子菜单第2个元素居中 */
 #nav .menus_items .menus_item:hover .menus_item_child {
   display: flex !important;
@@ -120,6 +122,7 @@
 .menus_items .menus_item:nth-child(2) .menus_item_child {   /*5表示第五个菜单元素*/
   left: -200px;    /*此栏与上栏参数可调节子菜单栏是否居中显示，具体自行尝试*/
 }
+
 /* 子菜单第2个元素居中 */
 #nav .menus_items .menus_item:hover .menus_item_child {
   display: flex !important;
@@ -128,6 +131,18 @@
 .menus_items .menus_item:nth-child(4) .menus_item_child {   /*5表示第五个菜单元素*/
   left: -90px;    /*此栏与上栏参数可调节子菜单栏是否居中显示，具体自行尝试*/
 }
+
+/* 子菜单第2个元素居中 */
+#nav .menus_items .menus_item:hover .menus_item_child {
+  display: flex !important;
+}
+/* 这里的2是代表导航栏的第2个元素，即有子菜单的元素，可以按自己需求修改,可以直接复制粘贴在下面 */
+.menus_items .menus_item:nth-child(5) .menus_item_child {   /*5表示第五个菜单元素*/
+  left: -70px;    /*此栏与上栏参数可调节子菜单栏是否居中显示，具体自行尝试*/
+}
+
+
+
 
 
 /* 黑夜霓虹灯 */
