@@ -1437,7 +1437,7 @@ canvas:not(#ribbon-canvas),
   }
 }
 :root {
-  --global-font-size: 16px;
+  --global-font-size: 15px;
   --global-bg: #fff;
   --font-color: #4c4948;
   --hr-border: #d2ebfd;
@@ -1481,7 +1481,7 @@ body {
   background: var(--global-bg);
   color: var(--font-color);
   font-size: var(--global-font-size);
-  font-family: kaishu;
+  font-family: var(--global-font),kaishu;;
   line-height: 2;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
@@ -1507,7 +1507,7 @@ input::placeholder {
   z-index: -999;
   width: 100%;
   height: 100%;
-  background: url(/img/homepage.webp);
+  background: var(--default-bg);
   background-attachment: local;
   background-position: center;
   background-size: cover;
@@ -1588,7 +1588,7 @@ a:hover {
 .site-name,
 #aside-content .author-info__name,
 #aside-content .author-info__description {
-  font-family: xingkai;
+  font-family: xingkai,var(--global-font);
 }
 .is-center {
   text-align: center;
@@ -1765,7 +1765,7 @@ figure.highlight pre .javascript .function {
 }
 #article-container pre,
 #article-container code {
-  font-size: 15px;
+  font-size: 14px;
   font-family: console !important;
 }
 #article-container code {
@@ -1793,7 +1793,7 @@ figure.highlight pre .javascript .function {
 #article-container figure.highlight figcaption,
 #article-container figure.highlight .caption {
   padding: 6px 0 2px 14px;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1em;
 }
 #article-container figure.highlight figcaption a,
@@ -1839,7 +1839,7 @@ figure.highlight pre .javascript .function {
   height: 2.15em;
   background: var(--hltools-bg);
   color: var(--hltools-color);
-  font-size: 15px;
+  font-size: 14px;
 }
 #article-container .highlight-tools.closed ~ * {
   display: none;
@@ -1968,7 +1968,7 @@ figure.highlight pre .javascript .function {
   width: 100%;
   background: var(--hlexpand-bg);
   text-align: center;
-  font-size: 15px;
+  font-size: 14px;
   cursor: pointer;
 }
 #article-container .code-expand-btn i {
@@ -2130,7 +2130,7 @@ figure.highlight pre .javascript .function {
   height: 100%;
   vertical-align: top;
   text-align: center;
-  font-family: xingkai;
+  font-family: xingkai,var(--global-font);
 }
 @media screen and (max-width: 768px) {
   .error404 #error-wrap .error-content .error-info {
@@ -4503,7 +4503,7 @@ h1.page-title + .tag-cloud-list {
   overflow-wrap: break-word;
 }
 #article-container a {
-  color: #99a9bf;
+  color: #a591e0;
 }
 #article-container a:hover {
   text-decoration: underline;
@@ -5429,6 +5429,19 @@ mjx-assistive-mml {
 @media screen and (max-width: 768px) {
   .fancybox__toolbar__column.is-middle {
     display: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  #web_bg {
+    background-image: var(--mobileday-bg);
+  }
+}
+[data-theme="dark"] #web_bg {
+  background-image: var(--darkmode-bg);
+}
+@media screen and (max-width: 800px) {
+  [data-theme="dark"] #web_bg {
+    background-image: var(--mobilenight-bg);
   }
 }
 #article-container .btn-center {
