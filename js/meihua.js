@@ -38,18 +38,18 @@ if (localStorage.getItem("reset_2") == undefined) {
   
   // 设置字体
   if (localStorage.getItem("font") == undefined) {
-    localStorage.setItem("font", "xxx");
+    localStorage.setItem("font", "xingkai");
   }
   setFont(localStorage.getItem("font"));
   function setFont(n) {
     localStorage.setItem("font", n)
     if (n == "default") {
       document.documentElement.style.setProperty('--global-font', '-apple-system');
-      document.body.style.fontFamily = "-apple-system, Consolas_1, BlinkMacSystemFont, 'Segoe UI' , 'Helvetica Neue' , Lato, Roboto, 'PingFang SC' , 'Microsoft JhengHei' , 'Microsoft YaHei' , sans-serif";
+      document.body.style.fontFamily = "-apple-system, Consolas_1, xingkai, 'zhengkai' , 'Helvetica Neue' , Lato, Roboto, 'PingFang SC' , 'Microsoft JhengHei' , 'Microsoft YaHei' , sans-serif";
     }
     else {
       document.documentElement.style.setProperty('--global-font', n);
-      document.body.style.fontFamily = "var(--global-font),-apple-system, IBM Plex Mono ,monosapce,'微软雅黑', sans-serif";
+      document.body.style.fontFamily = "var(--global-font),xingkai, IBM Plex Mono ,monosapce,'微软雅黑', sans-serif";
     }
     try { setFontBorder(); } catch (err) { };
   }
@@ -67,7 +67,7 @@ if (localStorage.getItem("reset_2") == undefined) {
   
   // 设置主题色
   if (localStorage.getItem("themeColor") == undefined) {
-    localStorage.setItem("themeColor", "green");
+    localStorage.setItem("themeColor", "blue");
   }
   setColor(localStorage.getItem("themeColor"));
   function setColor(c) {
@@ -117,6 +117,7 @@ if (localStorage.getItem("reset_2") == undefined) {
   // 刷新窗口
   function reload() {
     window.location.reload();
+    localStorage.setItem("themeColor", "blue");
   }
   
   // 侧边栏开关
@@ -142,7 +143,7 @@ if (localStorage.getItem("reset_2") == undefined) {
   
   // 透明度调节滑块
   if (localStorage.getItem("transNum") == undefined) {
-    localStorage.setItem("transNum", 95);
+    localStorage.setItem("transNum", 44);
   }
   var curTransNum = localStorage.getItem("transNum");
   var curTransMini = curTransNum * 0.95;
@@ -162,7 +163,7 @@ if (localStorage.getItem("reset_2") == undefined) {
   
   // 模糊度调节滑块
   if (localStorage.getItem("blurRad") == undefined) {
-    localStorage.setItem("blurRad", 20);
+    localStorage.setItem("blurRad", 2);
   }
   var curBlur = localStorage.getItem("blurRad"); // 当前模糊半径
   var miniBlur = curBlur * 0.95;
@@ -183,7 +184,7 @@ if (localStorage.getItem("reset_2") == undefined) {
   
   // 模糊效果开关
   if (localStorage.getItem("blur") == undefined) {
-    localStorage.setItem("blur", 0);
+    localStorage.setItem("blur", 1);
   }
   if (localStorage.getItem("blur") == 0) {
     document.getElementById("settingStyle").innerText = `:root{--backdrop-filter: none}`;
